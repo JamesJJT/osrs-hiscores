@@ -73,7 +73,7 @@
                                     </td>
                                     <td>{{$score['Name']}}</td>
                                     <td>{{$score['Level']}}</td>
-                                    <td>{{$score['XP']}}</td>
+                                    <td>{{number_format($score['XP'])}}</td>
                                 </tr>
                             @endforeach
                         </table>
