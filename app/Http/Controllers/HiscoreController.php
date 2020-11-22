@@ -41,13 +41,13 @@ class HiscoreController extends Controller
     }
 
     /**
-     * @param $get
+     * @param $username
      * @return \Illuminate\Http\Client\Response|\Illuminate\Http\RedirectResponse
      */
-    private function getHiscoreData($get)
+    private function getHiscoreData($username)
     {
         try {
-            $response =  Http::get('https://secure.runescape.com/m=hiscore_oldschool/a=12/index_lite.ws?player='.$get);
+            $response =  Http::get('https://secure.runescape.com/m=hiscore_oldschool/a=12/index_lite.ws?player='.$username);
         }catch (\Exception $exception){
             return back()->withErrors([
                 'connection' => 'Connection Error!'
